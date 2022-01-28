@@ -3,7 +3,8 @@ import { handleErrors } from '../server';
 import { User } from '../../../interfaces/user.interface';
 const crypto = require('crypto');
 
-const generateToken = () => { crypto.randomBytes(8).toString('hex') };
+const generateToken = () =>
+    crypto.randomBytes(8).toString('hex');
 
 export interface AuthResponse {
     token: string;
